@@ -2,6 +2,7 @@
     "$schema": "./node_modules/nx/schemas/workspace-schema.json",
     "version": 2,
     "projects": {
-        "conduit": "apps/conduit"
+        "conduit": "apps/conduit",
+        "conduit-layout-feature": "libs/conduit/layout/feature"
     }
 }
