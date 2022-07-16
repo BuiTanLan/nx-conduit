@@ -1,0 +1,87 @@
+{
+    "projectType": "application",
+    "sourceRoot": "apps/conduit/src",
+    "prefix": "conduit",
+    "targets": {
+        "build": {
+            "executor": "@angular-devkit/build-angular:browser",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/apps/conduit",
+                "index": "apps/conduit/src/index.html",
+                "main": "apps/conduit/src/main.ts",
+                "polyfills": "apps/conduit/src/polyfills.ts",
+                "tsConfig": "apps/conduit/tsconfig.app.json",
+                "inlineStyleLanguage": "scss",
+                "assets": ["apps/conduit/src/favicon.ico", "apps/conduit/src/assets"],
+                "styles": ["apps/conduit/src/styles.scss"],
+                "scripts": []
+            },
+            "configurations": {
+                "production": {
+                    "budgets": [
+                        {
+                            "type": "initial",
+                            "maximumWarning": "500kb",
+                            "maximumError": "1mb"
+                        },
+                        {
+                            "type": "anyComponentStyle",
+                            "maximumWarning": "2kb",
+                            "maximumError": "4kb"
+                        }
+                    ],
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/conduit/src/environments/environment.ts",
+                            "with": "apps/conduit/src/environments/environment.prod.ts"
+                        }
+                    ],
+                    "outputHashing": "all"
+                },
+                "development": {
+                    "buildOptimizer": false,
+                    "optimization": false,
+                    "vendorChunk": true,
+                    "extractLicenses": false,
+                    "sourceMap": true,
+                    "namedChunks": true
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "serve": {
+            "executor": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+                "production": {
+                    "browserTarget": "conduit:build:production"
+                },
+                "development": {
+                    "browserTarget": "conduit:build:development"
+                }
+            },
+            "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+                "browserTarget": "conduit:build"
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["apps/conduit/**/*.ts", "apps/conduit/**/*.html"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/apps/conduit"],
+            "options": {
+                "jestConfig": "apps/conduit/jest.config.ts",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": ["scope:conduit", "type:app"]
+}

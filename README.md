@@ -1,4 +1,5 @@
-
+pnpm create nx-workspace
+pnpm exec nx g @nrwl/angular:app  conduit -s -t -p=conduit --tags=scope:conduit,type:app --e2e-test-runner=none
 
 # NxConduit
 
