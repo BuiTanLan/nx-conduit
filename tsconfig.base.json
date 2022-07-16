@@ -16,7 +16,9 @@
         "baseUrl": ".",
         "paths": {
             "@nx-conduit/conduit/home/feature": ["libs/conduit/home/feature/src/index.ts"],
-            "@nx-conduit/conduit/layout/feature": ["libs/conduit/layout/feature/src/index.ts"]
+            "@nx-conduit/conduit/layout/feature": ["libs/conduit/layout/feature/src/index.ts"],
+            "@nx-conduit/conduit/login/feature": ["libs/conduit/login/feature/src/index.ts"],
+            "@nx-conduit/conduit/register/feature": ["libs/conduit/register/feature/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

@@ -14,7 +14,8 @@ bootstrapApplication(AppComponent, {
             RouterModule.forRoot([
                 {
                     path: '',
-                    loadComponent: () => import('@nx-conduit/conduit/layout/feature').then(m => m.LayoutComponent)
+                    loadComponent: () => import('@nx-conduit/conduit/layout/feature').then(m => m.LayoutComponent),
+                    loadChildren: () => import('@nx-conduit/conduit/layout/feature').then(m => m.layoutRoutes)
                 }
             ])
         )
