@@ -797,6 +797,7 @@ nx affected:e2e</pre>
         </div>
     `,
     styles: [],
+    standalone: true,
     encapsulation: ViewEncapsulation.None,
 })
 export class NxWelcomeComponent implements OnInit {
