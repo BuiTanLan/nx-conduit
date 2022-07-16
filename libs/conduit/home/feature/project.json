@@ -1,0 +1,38 @@
+{
+    "projectType": "library",
+    "sourceRoot": "libs/conduit/home/feature/src",
+    "prefix": "conduit",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/angular:ng-packagr-lite",
+            "outputs": ["dist/libs/conduit/home/feature"],
+            "options": {
+                "project": "libs/conduit/home/feature/ng-package.json"
+            },
+            "configurations": {
+                "production": {
+                    "tsConfig": "libs/conduit/home/feature/tsconfig.lib.prod.json"
+                },
+                "development": {
+                    "tsConfig": "libs/conduit/home/feature/tsconfig.lib.json"
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/conduit/home/feature"],
+            "options": {
+                "jestConfig": "libs/conduit/home/feature/jest.config.ts",
+                "passWithNoTests": true
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["libs/conduit/home/feature/**/*.ts", "libs/conduit/home/feature/**/*.html"]
+            }
+        }
+    },
+    "tags": ["scope:conduit", "type:feature", "context:home"]
+}

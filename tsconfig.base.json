@@ -15,6 +15,7 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
+            "@nx-conduit/conduit/home/feature": ["libs/conduit/home/feature/src/index.ts"],
             "@nx-conduit/conduit/layout/feature": ["libs/conduit/layout/feature/src/index.ts"]
         }
     },

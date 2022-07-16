@@ -3,6 +3,7 @@
     "version": 2,
     "projects": {
         "conduit": "apps/conduit",
+        "conduit-home-feature": "libs/conduit/home/feature",
         "conduit-layout-feature": "libs/conduit/layout/feature"
     }
 }
