@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component} from "@angular/core";
+import {RouterModule} from "@angular/router";
 
 @Component({
     selector: 'conduit-login',
@@ -11,7 +12,7 @@ import {ChangeDetectionStrategy, Component} from "@angular/core";
                     <div class="col-md-6 offset-md-3 col-xs-12">
                         <h1 class="text-xs-center">Sign in</h1>
                         <p class="text-xs-center">
-                            <a href="">Need an account?</a>
+                            <a routerLink="/register">Need an account?</a>
                         </p>
 
                         <ul class="error-messages">
@@ -36,7 +37,8 @@ import {ChangeDetectionStrategy, Component} from "@angular/core";
         </div>
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true
+    standalone: true,
+    imports: [RouterModule]
 })
 export class LoginComponent{
 
