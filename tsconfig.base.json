@@ -18,7 +18,9 @@
             "@nx-conduit/conduit/home/feature": ["libs/conduit/home/feature/src/index.ts"],
             "@nx-conduit/conduit/layout/feature": ["libs/conduit/layout/feature/src/index.ts"],
             "@nx-conduit/conduit/login/feature": ["libs/conduit/login/feature/src/index.ts"],
-            "@nx-conduit/conduit/register/feature": ["libs/conduit/register/feature/src/index.ts"]
+            "@nx-conduit/conduit/register/feature": ["libs/conduit/register/feature/src/index.ts"],
+            "@nx-conduit/conduit/shared/data-access-api": ["libs/conduit/shared/data-access-api/src/index.ts"],
+            "@nx-conduit/conduit/shared/ui-auth-layout": ["libs/conduit/shared/ui-auth-layout/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

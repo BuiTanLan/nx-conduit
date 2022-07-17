@@ -3,6 +3,7 @@ import { environment } from './environments/environment';
 import {bootstrapApplication} from "@angular/platform-browser";
 import {AppComponent} from "./app/app.component";
 import {RouterModule} from "@angular/router";
+import { provideApiConfiguration} from "@nx-conduit/conduit/shared/data-access-api";
 
 if (environment.production) {
     enableProdMode();
@@ -10,6 +11,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
     providers: [
+        provideApiConfiguration(environment.appwrite),
         importProvidersFrom(
             RouterModule.forRoot([
                 {

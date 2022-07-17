@@ -1,6 +1,7 @@
 pnpm create nx-workspace
 pnpm exec nx g @nrwl/angular:app  conduit -s -t -p=conduit --tags=scope:conduit,type:app --e2e-test-runner=none
 pnpm exec nx g @nrwl/angular:lib layout/feature --directory=conduit --buildable -p=conduit --tags=scope:conduit,type:feature,context:layout  --skip-module
+pnpm exec nx g @nrwl/angular:lib shared/data-access-api --directory=conduit --buildable -p=conduit --tags=scope:conduit,type:data-access,context:shared,context:shared:api  --skip-module
 
 # NxConduit
 

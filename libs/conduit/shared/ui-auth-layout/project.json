@@ -1,0 +1,41 @@
+{
+    "projectType": "library",
+    "sourceRoot": "libs/conduit/shared/ui-auth-layout/src",
+    "prefix": "conduit",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/angular:ng-packagr-lite",
+            "outputs": ["dist/libs/conduit/shared/ui-auth-layout"],
+            "options": {
+                "project": "libs/conduit/shared/ui-auth-layout/ng-package.json"
+            },
+            "configurations": {
+                "production": {
+                    "tsConfig": "libs/conduit/shared/ui-auth-layout/tsconfig.lib.prod.json"
+                },
+                "development": {
+                    "tsConfig": "libs/conduit/shared/ui-auth-layout/tsconfig.lib.json"
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/conduit/shared/ui-auth-layout"],
+            "options": {
+                "jestConfig": "libs/conduit/shared/ui-auth-layout/jest.config.ts",
+                "passWithNoTests": true
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": [
+                    "libs/conduit/shared/ui-auth-layout/**/*.ts",
+                    "libs/conduit/shared/ui-auth-layout/**/*.html"
+                ]
+            }
+        }
+    },
+    "tags": ["scope:conduit", "type:ui", "context:shared", "context:shared:auth-layout"]
+}
