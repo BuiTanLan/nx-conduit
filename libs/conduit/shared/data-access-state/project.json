@@ -1,0 +1,41 @@
+{
+    "projectType": "library",
+    "sourceRoot": "libs/conduit/shared/data-access-state/src",
+    "prefix": "conduit",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/angular:ng-packagr-lite",
+            "outputs": ["dist/libs/conduit/shared/data-access-state"],
+            "options": {
+                "project": "libs/conduit/shared/data-access-state/ng-package.json"
+            },
+            "configurations": {
+                "production": {
+                    "tsConfig": "libs/conduit/shared/data-access-state/tsconfig.lib.prod.json"
+                },
+                "development": {
+                    "tsConfig": "libs/conduit/shared/data-access-state/tsconfig.lib.json"
+                }
+            },
+            "defaultConfiguration": "production"
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/conduit/shared/data-access-state"],
+            "options": {
+                "jestConfig": "libs/conduit/shared/data-access-state/jest.config.ts",
+                "passWithNoTests": true
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": [
+                    "libs/conduit/shared/data-access-state/**/*.ts",
+                    "libs/conduit/shared/data-access-state/**/*.html"
+                ]
+            }
+        }
+    },
+    "tags": ["scope:conduit", "type:data-access", "context:shared", "context:shared:states"]
+}

@@ -8,6 +8,7 @@
         "conduit-login-feature": "libs/conduit/login/feature",
         "conduit-register-feature": "libs/conduit/register/feature",
         "conduit-shared-data-access-api": "libs/conduit/shared/data-access-api",
+        "conduit-shared-data-access-state": "libs/conduit/shared/data-access-state",
         "conduit-shared-ui-auth-layout": "libs/conduit/shared/ui-auth-layout"
     }
 }
